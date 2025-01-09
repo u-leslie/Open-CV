@@ -12,7 +12,8 @@ cv2.rectangle(image, (255, 190), (980, 920), (0, 255, 0), 8)
 # Add text to the image
 # Text: 'RAH972U', Location (x,y): (100, 200)
 # Font: FONT_HERSHEY_SIMPLEX, Scale: 1, Color: Green (BGR: (0, 255, 0)), Thickness: 14
-cv2.putText(image, 'RAH972U', (760, 160), cv2.FONT_HERSHEY_PLAIN, 6, (0, 255, 0), 10)
+cv2.putText(image, 'RAH972U', (780, 160), cv2.FONT_HERSHEY_PLAIN, 6, (0, 255, 0), 10)
+cv2.addWeighted(cv2.rectangle(image.copy(), (750, 85), (1230, 175), (0, 0, 0), -1), 0.5, image, 1 - 0.5, 0, dst=image)
 
 # Display the image in a new window named 'Image'
 cv2.imshow('Image', image)
