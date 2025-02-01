@@ -1,0 +1,4 @@
+[console_scripts]
+read_datamatrix = pylibdmtx.scripts.read_datamatrix:main
+write_datamatrix = pylibdmtx.scripts.write_datamatrix:main
+

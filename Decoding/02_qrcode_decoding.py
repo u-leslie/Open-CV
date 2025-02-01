@@ -1,20 +1,21 @@
+from pylibdmtx.pylibdmtx import decode
 import cv2
 
-# Initialize QR code detector
-detector = cv2.QRCodeDetector()
 
-# Read the image
-image = cv2.imread("qrcode.png")
+image = cv2.imread("qr.jpg", cv2.IMREAD_GRAYSCALE) 
 
-# Detect and decode the QR code
-data, points, _ = detector.detectAndDecode(image)
 
-if data:
-    print(f"QR Code Data: {data}")
-    cv2.polylines(image, [points.astype(int)], True, (0, 255, 0), 2)
-else:
-    print("No QR code detected.")
+decoded_objects = decode(image)
 
-cv2.imshow("QR Code", image)
+for obj in decoded_objects:
+    data = obj.data.decode("utf-8")
+    print("Decoded Data:", data)
+
+
+output_file = "decoded_datamatrix_code.png"
+cv2.imwrite(output_file, image)
+print(f" Annotated image saved as {output_file}")
+
+cv2.imshow("Barcode with Annotation", image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
