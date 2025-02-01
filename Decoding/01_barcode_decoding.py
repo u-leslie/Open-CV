@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 # Read the image
-image = cv2.imread("barcode.png")
+image = cv2.imread("dl-gabriel10.png")
 
 # Decode the barcode
 barcodes = decode(image)
@@ -26,8 +26,10 @@ cv2.imshow("Barcode with Annotation", image)
 key = cv2.waitKey(0)
 
 # Save the annotated image when a key is pressed
-output_file = "decoded_barcode.png"
+output_file = "decoded_barcode_1.png"
 cv2.imwrite(output_file, image)
 print(f"Annotated image saved as {output_file}")
 
 cv2.destroyAllWindows()
+
+
