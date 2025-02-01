@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Load the image
-image = cv2.imread("qr2.jpg")
+image = cv2.imread("image04.png")
 
 if image is None:
     print("Error: Image not loaded correctly.")

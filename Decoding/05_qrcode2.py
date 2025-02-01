@@ -2,7 +2,7 @@ import cv2
 from pyzbar.pyzbar import decode
 
 # Read the image
-image = cv2.imread("aztec.jpg")
+image = cv2.imread("image05.png")
 
 # Check if the image is loaded correctly
 if image is None:

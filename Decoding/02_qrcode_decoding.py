@@ -2,7 +2,7 @@ from pylibdmtx.pylibdmtx import decode
 import cv2
 
 
-image = cv2.imread("qr.jpg", cv2.IMREAD_GRAYSCALE) 
+image = cv2.imread("image02.jpg", cv2.IMREAD_GRAYSCALE) 
 
 
 decoded_objects = decode(image)
