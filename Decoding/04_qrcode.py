@@ -1,36 +1,34 @@
+from pyzbar.pyzbar import decode
 import cv2
 import numpy as np
 
-# Load the image
-image = cv2.imread("image04.png")
+# Read the image
+image = cv2.imread("Decoding/image042.jpg")
 
-if image is None:
-    print("Error: Image not loaded correctly.")
-    exit()
+# Decode the barcode
+barcodes = decode(image)
+for barcode in barcodes:
+    data = barcode.data.decode("utf-8")
+    print(f"Barcode Data: {data}")
+   
+   
+    points = barcode.polygon
+    points = [(point.x, point.y) for point in points]
+    cv2.polylines(image, [np.array(points, dtype=np.int32)], True, (0, 255, 0), 2)
 
-# Convert to grayscale
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    # Annotate the decoded data beside the bounding box
+    x, y = points[0]  # Take the first point of the bounding box
+    cv2.putText(image, data, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)  # Green text
 
-# Apply adaptive thresholding
-gray = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+# Display the image with the barcode highlighted and annotated
+cv2.imshow("Barcode with Annotation", image)
 
-# Initialize QR code detector
-detector = cv2.QRCodeDetector()
+# Wait for a key press
+key = cv2.waitKey(0)
 
-# Detect and decode the QR code
-data, points, _ = detector.detectAndDecode(gray)
+# Save the annotated image when a key is pressed
+output_file = "decoded_barcode.png"
+cv2.imwrite(output_file, image)
+print(f"Annotated image saved as {output_file}")
 
-print(f"Points detected: {points}")
-
-if data:
-    print(f"QR Code Data: {data}")
-    if points is not None:
-        points = points.astype(int)
-        cv2.polylines(image, [points], True, (0, 255, 0), 2)
-else:
-    print("No QR code detected.")
-
-# Display the result
-cv2.imshow("QR Code", image)
-cv2.waitKey(0)
 cv2.destroyAllWindows()

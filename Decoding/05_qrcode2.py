@@ -1,34 +1,35 @@
 import cv2
 from pyzbar.pyzbar import decode
-
-# Read the image
-image = cv2.imread("image05.png")
-
-# Check if the image is loaded correctly
-if image is None:
-    print("Error: Image not loaded correctly.")
-    exit()
-
-# Convert to grayscale
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-# Detect and decode barcodes (including Aztec codes)
-decoded_objects = decode(gray)
-
-if decoded_objects:
-    for obj in decoded_objects:
-        print(f"Detected Aztec Code: {obj.data.decode('utf-8')}")
-        
-        # Draw a rectangle around the detected code
-        points = obj.polygon
-        if len(points) == 4:
-            pts = [(point.x, point.y) for point in points]
-            pts = [tuple(map(int, pt)) for pt in pts]
-            cv2.polylines(image, [pts], isClosed=True, color=(0, 255, 0), thickness=2)
+import numpy as np
+import zxing
+# Initialize the ZXing reader
+reader = zxing.BarCodeReader()
+# Load the Aztec code image
+image_path = "Decoding/image05.png"  # Replace with your image path
+image = cv2.imread(image_path)
+# Decode the Aztec code using ZXing
+decoded = reader.decode(image_path)
+# Check if the Aztec code was successfully decoded
+if decoded:
+    print(f"Decoded Data: {decoded.parsed}")
+    print(f"Barcode Format: {decoded.format}")
+    # Check if points are available
+    if hasattr(decoded, "points") and decoded.points:
+        try:
+            points = np.array(decoded.points, dtype=np.int32).reshape((-1, 1, 2))  # Ensure proper shape
+            cv2.polylines(image, [points], isClosed=True, color=(0, 255, 0), thickness=2)
+            # Annotate the decoded data beside the bounding box
+            x, y = points[0][0]  # Extract x, y coordinates
+            cv2.putText(image, decoded.parsed, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+        except Exception as e:
+            print(f"Error processing bounding box: {e}")
+    # Display the image with the Aztec code highlighted and annotated
+    cv2.imshow("Aztec Code with Annotation", image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+    # Save the annotated image
+    output_file = "decoded_aztec.png"
+    cv2.imwrite(output_file, image)
+    print(f"Annotated image saved as {output_file}")
 else:
-    print("No Aztec code detected.")
-
-# Show the image
-cv2.imshow("Aztec Code", image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+    print("Failed to decode the Aztec code.")

@@ -3,14 +3,15 @@ import cv2
 import numpy as np
 
 # Read the image
-image = cv2.imread("image01.png")
+image = cv2.imread("Decoding/image01.png")
 
 # Decode the barcode
 barcodes = decode(image)
 for barcode in barcodes:
     data = barcode.data.decode("utf-8")
     print(f"Barcode Data: {data}")
-    # Draw a rectangle around the barcode
+   
+   
     points = barcode.polygon
     points = [(point.x, point.y) for point in points]
     cv2.polylines(image, [np.array(points, dtype=np.int32)], True, (0, 255, 0), 2)
@@ -26,10 +27,8 @@ cv2.imshow("Barcode with Annotation", image)
 key = cv2.waitKey(0)
 
 # Save the annotated image when a key is pressed
-output_file = "decoded_barcode_1.png"
+output_file = "decoded_barcode.png"
 cv2.imwrite(output_file, image)
 print(f"Annotated image saved as {output_file}")
 
 cv2.destroyAllWindows()
-
-
