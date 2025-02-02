@@ -1,0 +1,2 @@
+[pyinstaller40]
+hook-dirs = aspose.barcode:get_pyinstaller_hook_dirs

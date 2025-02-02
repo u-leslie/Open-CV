@@ -1,0 +1,133 @@
+Metadata-Version: 2.1
+Name: aspose-barcode-for-python-via-net
+Version: 25.1
+Summary: Aspose.BarCode for Python via .NET is a python libray for generation and recognition of barcodes for many popular formats.
+Home-page: https://products.aspose.com/barcode/python-net/
+Author: Aspose
+License: https://company.aspose.com/legal/eula
+Project-URL: Homepage, https://products.aspose.com/barcode/python-net/
+Project-URL: API Reference, https://docs.aspose.com/barcode/python-net/api-reference/
+Project-URL: Blog, https://blog.aspose.com/category/barcode/
+Project-URL: Demos, https://products.aspose.app/barcode/family
+Project-URL: Documentation, https://docs.aspose.com/barcode/python-net/
+Project-URL: Free support, https://forum.aspose.com/c/barcode/13
+Project-URL: Temporary License, https://purchase.aspose.com/temporary-license/
+Keywords: Aspose.Barcode, barcode, generation, recognition, Alpha-Numeric, AI-8102-Coupon, AustralianPosteParcel, AustraliaPost, Aztec, Codabar, CodablockF, Code11, Code128, Code16K, Code32, Code39Extended, Code39Standard, Code93Extended, Code93Standard, DatabarExpanded, DatabarExpandedStacked, DatabarLimited, DatabarOmniDirectional, DatabarStacked, DatabarStackedOmniDirectional, DatabarTruncated, DataLogic2of5, DataMatrix, DeutschePostIdentcode, DeutschePostLeitcode, DotCode, DutchKIX, EAN13, EAN14, EAN8, GS1CodablockF, GS1Code128, GS1DataMatrix, GS1QR, IATA2of5, Interleaved2of5, ISBN, ISMN, ISSN, ItalianPost25, ITF14, ITF6, Mailmark2D, Mailmark4-State, MacroPdf417, Matrix2of5, MaxiCode, MicroPdf417, MSI, OneCode, OPC, PatchCode, Pdf417, Pharmacode, Planet, Postnet, PZN, QR, RM4SCC, SCC14, SingaporePost, SSCC18, Standard2of5, SwissQR, SwissPostParcel, UPCA, UpcaGs1Code128Coupon, UpcaGs1DatabarCoupon, UPCE, VIN, HanXin, rMQR, Rectangular-Micro-QR-Code
+Platform: win_amd64
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.6,<3.14
+Description-Content-Type: text/markdown
+
+# Barcode Generation & Scanning Library for Python
+
+[Product Page](https://products.aspose.com/barcode/python-net/) | [Docs](https://docs.aspose.com/barcode/python-net/) | [Demos](https://products.aspose.app/barcode/family) | [API Reference](https://docs.aspose.com/barcode/python-net/api-reference/) | [Examples](https://github.com/aspose-barcode/Aspose.Barcode-for-Python-via-.NET) | [Blog](https://blog.aspose.com/category/barcode/) | [Free Support](https://forum.aspose.com/c/barcode/13) | [Temporary License](https://purchase.aspose.com/temporary-license/)
+
+[Aspose.BarCode for Python via .NET](https://products.aspose.com/barcode/python-net/) is a barcode Python library for barcode generation and scanning to be used in a Python application. The barcode library allows fine-tuning of barcode appearance aspects like barcode size, captions, alignment, colors, font and its size. The library supports wide range of scanning presets for optimal trade-off between recognition speed and quality.
+
+## What is Aspose.BarCode for Python via .NET?
+
+[Aspose.BarCode for Python via .NET](https://products.aspose.com/barcode/python-net/) supports more tan 40 different barcode symbologies. Aspose.BarCode for Python via .NET supports various file formats such as JPEG, SVG, PNG, EMF, etc. You can generate high-quality numeric, alpha-numeric and 2D barcodes, also you can tune the appearance of the generated barcodes such as codetext, captions, dimensions, aspect ratio, and more.
+
+Aspose.BarCode for Python via .NET also assists you in barcode scanning in an efficient manner via internal multi-threading. It can recognize barcode symbologies and fetch the encoded text. You can also detect several symbologies present in a single picture or perform barcode recognition on a page with mixed text and images.
+
+
+## Barcode Generation Features
+
+- [Generate barcode](https://docs.aspose.com/barcode/python-net/barcode-generation/) images programmatically.
+- [Create a 'QR' and 'MicroQR' Barcode](https://docs.aspose.com/barcode/python-net/generate-qr-code/), set error correction level, and encoding mode.
+- Create [Datamatrix barcodes](https://docs.aspose.com/barcode/python-net/generate-datamatrix-barcode/) with default or custom encoding mode.
+- Enable checksum for the barcodes of applicable symbologies.
+- Supports error correction for various types of barcodes.
+- Adjust image size of 2D barcodes and set aspect ratio.
+- Enable image border, modify barcode image border width and style.
+- Detect Unicode encoding of barcodes.
+- Hide codetext that is too long or reduce the font size of codetext.
+- Codetext can be set as per the associated symbology type and the outbound part is truncated.
+- Colorize barcode, code text, barcode background, barcode border, and caption.
+- Specify size unit for the barcode image in document, inch, millimeter, pixel, and point.
+- Lots of other barcode processing features.
+
+## Supported Symbologies for Barcode Generation & Recognition
+
+- BarCode Supplement
+- BooklandEAN
+- Codabar
+- Code11
+- Code128
+- Code39 Extended
+- Code39 Standard
+- Code93 Extended
+- Code93 Standard
+- Datamatrix
+- Deutsche Post Identcode
+- EAN128
+- EAN13
+- EAN14(SCC14)
+- EAN8
+- Interleaved2of5
+- ITF14
+- Matrix 2 of 5
+- MSI
+- PDF417
+- Planet
+- Postnet
+- PZN (Pharma Zentral Nummer, Pharmazentralnummer barcode)
+- QR
+- Han Xin
+- SSCC18
+- Standard2of5
+- UPCA
+- UPCE
+
+## Supported Symbologies for Barcode Generation Only
+
+- Australia Post
+- Aztec
+
+## Read & Write Barcode Labels
+
+JPEG, TIFF, PNG, BMP, GIF
+
+## Save Barcode Labels As
+
+EMF, SVG
+
+## Generate QR Barcode in PNG Format
+
+You can execute the below code snippet to see how Aspose.BarCode API works in your development environment. You may also check the [GitHub Repository](https://github.com/aspose-barcode/Aspose.Barcode-for-Python-via-.NET) for other common usage scenarios.
+
+```python
+from aspose.barcode import generation
+
+gen = generation.BarcodeGenerator(generation.EncodeTypes.QR, "ASPOSE")
+gen.save("output.png", generation.BarCodeImageFormat.PNG)
+```
+
+## Hide Barcode Label Text using Python
+
+You can customize properities of generated barcode with Aspose.BarCode for Python via .NET. The following example shows how to hide the barcode text using Python:
+
+```python
+from aspose.barcode import generation
+
+gen = generation.BarcodeGenerator(generation.EncodeTypes.DATA_MATRIX, "ASPOSE")
+gen.parameters.barcode.code_text_parameters.location = generation.CodeLocation.NONE
+gen.save("output.png", generation.BarCodeImageFormat.PNG)
+```
+
+[Product Page](https://products.aspose.com/barcode/python-net/) | [Docs](https://docs.aspose.com/barcode/python-net/) | [Demos](https://products.aspose.app/barcode/family) | [API Reference](https://docs.aspose.com/barcode/python-net/api-reference/) | [Examples](https://github.com/aspose-barcode/Aspose.Barcode-for-Python-via-.NET) | [Blog](https://blog.aspose.com/category/barcode/) | [Free Support](https://forum.aspose.com/c/barcode/13) | [Temporary License](https://purchase.aspose.com/temporary-license/)
